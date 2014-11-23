@@ -71,7 +71,7 @@
 #	endif
 
 #	ifndef PROGMEM_SIZE
-#		define PROGMEM_SIZE			((FLASHEND)+1)
+#		define PROGMEM_SIZE			((uint_farptr_t)(FLASHEND)+1)
 #	endif
 
 #	ifndef BOOT_SECTION_START
