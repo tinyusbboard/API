@@ -27,6 +27,11 @@
 #	error XMega architecture not supported
 #endif
 
+#ifndef MCUCSR /* compatibility between ATMega8 and ATMega88 */
+# define MCUCSR MCUSR
+#endif
+
+
 #define	apipage_pagefillcode	(_BV(SPMEN))
 #define apipage_pageerasecode	((_BV(PGERS)) | (_BV(SPMEN)))
 #define	apipage_pagewritecode	((_BV(PGWRT)) | (_BV(SPMEN)))
